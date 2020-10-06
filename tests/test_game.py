@@ -4,6 +4,7 @@ from string import ascii_uppercase as base_letters
 
 from src.game import Game
 
+
 class TestGame(unittest.TestCase):
 
     def test_game_initialization(self):
