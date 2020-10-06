@@ -20,3 +20,8 @@ class TestGame(unittest.TestCase):
         false_grid = grid.copy()[:6]
         self.assertTrue(new_game.is_valid(grid))
         self.assertFalse(new_game.is_valid(false_grid))
+
+    def test_unknown_word(self):
+        new_game = Game()
+        new_game.grid = "KWIENFUQW"
+        self.assertIs(new_game.is_valid("FEUN"), False)
