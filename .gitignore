@@ -1,9 +1,6 @@
 # IDE
 .vscode
 
-# Pip
-Pipfile.lock
-
 # Heroku
 heroku*
 heroku/*
