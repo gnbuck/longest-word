@@ -1,5 +1,4 @@
 import requests
-import json
 
 from helpers import random_grid
 
@@ -14,12 +13,10 @@ class Game():
 
 
     def is_valid(self, word):
-        if len(word) != 9:
-            return False
         for letter in word:
             if letter not in self.grid:
                 return False
         response = requests.get(f"https://wagon-dictionary.herokuapp.com/{word}")
-        if response.json() is None:
+        if response.json()["found"] is not True:
             return False
         return True
