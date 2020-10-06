@@ -3,3 +3,7 @@
 
 # Pip
 Pipfile.lock
+
+# Heroku
+heroku*
+heroku/*
